@@ -1,0 +1,64 @@
+.contato {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fonte-primaria);
+    font-weight: 700;
+    padding: 10em 2em; 
+    margin: 6em auto; 
+}
+
+.contato__texto {
+    font-size: 4rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contato__texto strong{
+    color: var(--cor-secundaria);
+    text-shadow: 4px 4px 4px rgba(6, 169, 126, 0.25);
+}
+
+.contato__botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.contato__botoes__botao{
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    border: 2px solid var(--cor-secundaria);
+    border-radius: 5px;
+    color: var(--cor-primaria);
+    background-color: transparent;
+    text-decoration: none;
+    padding: 2em 4em;
+    text-align: center;
+}
+
+.email:hover {
+    transition: 1s;
+    background-color: #c71610;
+    border: 2px solid var(--cor-primaria);
+}
+
+.whatsapp:hover {
+    transition: 1s;
+    background-color: #25d366;
+    border: 2px solid var(--cor-primaria);
+}
+
+.contato__botoes__botao img {
+    width: 20px;
+    height: 20px; 
+}

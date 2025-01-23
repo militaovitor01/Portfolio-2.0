@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url(styles/header.css);
+@import url(styles/apresentacao.css);
+@import url(styles/sobre-mim.css);
+@import url(styles/contato.css);
+
+:root {
+    --background-color: #0f0e16;
+    --cor-primaria:#ffffff;
+    --cor-secundaria: #04a97f;
+
+    --fonte-primaria: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth; /* Ativa a rolagem suave */
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--cor-primaria);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Defina a animação */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Movimenta o elemento de baixo para cima */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* O elemento volta para a posição original */
+    }
+}
+
+/* Classe de transição aplicada aos elementos */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Caso queira um efeito de transição mais suave */
+.fade-in.visible {
+    opacity: 1;
+}

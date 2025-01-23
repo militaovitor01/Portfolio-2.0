@@ -1,0 +1,54 @@
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;  /* Torna o cabeçalho fixo no topo */
+    top: 0;
+    left: 0;
+    width: 100%;  /* O cabeçalho ocupa toda a largura da tela */
+    background-color: var(--background-color); /* Defina a cor de fundo */
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+    box-shadow: 0 0 5px rgba(166, 194, 187, 0.25); /* Adiciona sombra abaixo do cabeçalho */
+}
+
+.img-cabecalho {
+    width: 100px;
+    height: 100px;
+}
+
+.lista__cabecalho {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 3em;
+}
+
+.lista__cabecalho__intens-item {
+    text-decoration: none;
+    font-family: var(--fonte-primaria);
+    color: var(--cor-primaria);
+    font-weight: 600;
+    padding: 1em 2em;  /* Ajuste o padding para que o link não fique tão espaçado */
+}
+
+.lista__cabecalho__intens-item:hover {
+    color: var(--cor-secundaria);
+    transition: 0.5s;
+    text-shadow: 4px 4px 4px rgba(6, 169, 126, 0.25);
+}
+
+/* Espaçamento do conteúdo abaixo do cabeçalho fixo */
+body {
+    margin-top: 80px; /* Ajuste conforme a altura do cabeçalho */
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 768px) {
+    .cabecalho {
+        padding: 15px 0;
+    }
+    body {
+        margin-top: 100px; /* Ajuste a margem conforme a altura do cabeçalho */
+    }
+}
