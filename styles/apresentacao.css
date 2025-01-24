@@ -42,6 +42,12 @@
     height: 20px;
 }
 
+.apresentacao__texto__lista-redes-sociais__item:hover {
+    transform: translateY(-5px); 
+    box-shadow: 6px 6px 8px rgba(6, 169, 126, 0.35); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ajusta a suavidade do efeito */
+}
+
 .apresentacao__texto__botao {
     width: 40%;
     border: 2px solid var(--cor-secundaria);

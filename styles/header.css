@@ -24,6 +24,13 @@
     margin-right: 3em;
 }
 
+.alterar__tema img{
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    filter: brightness(0) invert(1);
+}
+
 .lista__cabecalho__intens-item {
     text-decoration: none;
     font-family: var(--fonte-primaria);
