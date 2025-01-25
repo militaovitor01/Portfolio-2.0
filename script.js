@@ -1,3 +1,20 @@
+const botaoAlterarTema = document.querySelector('.alterar__tema')
+const trocarTema = new Audio('sons/pause.mp3')
+
+botaoAlterarTema.addEventListener('click', function(){
+    const html = document.querySelector('html')
+    const auxiliar = html.getAttribute('data-contexto')
+    console.log(auxiliar)
+
+    if(auxiliar == 'black'){
+        html.setAttribute('data-contexto', 'white')
+    }else {
+        html.setAttribute('data-contexto', 'black')
+    }
+
+    trocarTema.play()    
+})
+
 // Cria o observer para verificar quando os elementos entram na tela
 const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {

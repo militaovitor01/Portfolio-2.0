@@ -2,13 +2,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    position: fixed;  /* Torna o cabeçalho fixo no topo */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;  /* O cabeçalho ocupa toda a largura da tela */
-    background-color: var(--background-color); /* Defina a cor de fundo */
+    background-color: var(--background-color); 
     z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
-    box-shadow: 0 0 5px rgba(166, 194, 187, 0.25); /* Adiciona sombra abaixo do cabeçalho */
+    box-shadow: 0 0 5px rgba(166, 194, 187, 0.25); 
 }
 
 .img-cabecalho {
@@ -29,6 +29,7 @@
     width: 20px;
     cursor: pointer;
     filter: brightness(0) invert(1);
+    padding-right: 1.5em;
 }
 
 .lista__cabecalho__intens-item {
@@ -49,6 +50,12 @@
 body {
     margin-top: 80px; /* Ajuste conforme a altura do cabeçalho */
 }
+
+/*White Mode*/
+[data-contexto="white"] .alterar__tema img{
+    filter:none;
+}    
+
 
 /* Responsividade para dispositivos menores */
 @media (max-width: 768px) {

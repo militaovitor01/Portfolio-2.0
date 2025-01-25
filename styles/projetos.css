@@ -16,6 +16,8 @@
     display: flex;
     gap: 1.5em;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .projetos__lista__item {
@@ -42,7 +44,7 @@
 .projetos__lista__item__titulo {
     font-size: 1.5rem;
     font-family: var(--fonte-primaria);
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .projetos__lista__item-img {

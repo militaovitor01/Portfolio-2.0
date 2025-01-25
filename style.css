@@ -14,6 +14,12 @@
     --fonte-primaria: 'Roboto', sans-serif;
 }
 
+[data-contexto="white"] {
+    --background-color: #ffffff;
+    --cor-primaria: #0f0e16;
+    --cor-secundaria: #04a97f;
+}
+
 html {
     scroll-behavior: smooth;
 }

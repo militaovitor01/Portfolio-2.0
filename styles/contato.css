@@ -62,3 +62,8 @@
     width: 20px;
     height: 20px; 
 }
+
+[data-contexto="white"] .whatsapp img{
+    filter: invert(1); /* Inverte as cores */
+    transition: filter 0.3s ease-in-out; /* Transição suave */
+}    
