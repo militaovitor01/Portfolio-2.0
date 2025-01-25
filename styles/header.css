@@ -8,7 +8,7 @@
     width: 100%;  /* O cabeçalho ocupa toda a largura da tela */
     background-color: var(--background-color); 
     z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
-    box-shadow: 0 0 5px rgba(166, 194, 187, 0.25); 
+    box-shadow: 0 0 5px rgba(6, 169, 126, 0.25); 
 }
 
 .img-cabecalho {
