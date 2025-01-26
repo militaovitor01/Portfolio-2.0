@@ -54,3 +54,11 @@
     width: 40vh;
     height: 25vh;
 }
+
+@media (max-width: 1200px) {
+    .projetos__titulo {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+}

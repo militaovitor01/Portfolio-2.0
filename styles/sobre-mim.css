@@ -59,6 +59,41 @@
     object-fit: cover;
 }
 
+@media (max-width: 1200px) {
+    .container-1, .container-2 {
+        flex-direction: column;
+        padding: 1em; /* Reduz o padding interno */
+        margin: 0em; /* Remove a margem */
+        width: 100%; /* Garante que o contêiner ocupe toda a largura */
+        max-width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container-2 {
+        flex-direction: column-reverse;
+    }
+
+    .container-1__img {
+        width: 80%; /* Ajuste a largura da imagem para não ocupar 100% */
+        margin: 0 auto; /* Centraliza a imagem */
+        border-radius: 3%;
+        box-shadow: 8px 8px 8px rgba(6, 169, 126, 0.25); /* Mantém o estilo */
+    }
+
+    .sobre-mim__texto {
+        width: 100%; /* Garante que o texto ocupe toda a largura */
+        padding: 0.5em; /* Reduz o espaçamento interno */
+        margin: 0; /* Remove espaçamento externo */
+        font-size: 1rem; /* Ajusta o tamanho da fonte para telas menores */
+        text-align: justify;
+    }
+
+    .container__lista__titulo {
+        text-align: center;
+    }
+}
+
 
 
 

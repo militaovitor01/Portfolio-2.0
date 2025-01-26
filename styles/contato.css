@@ -67,3 +67,26 @@
     filter: invert(1); /* Inverte as cores */
     transition: filter 0.3s ease-in-out; /* Transição suave */
 }    
+
+@media (max-width: 1200px) {
+    .contato {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2em 1em;
+        gap: 2em;
+    }
+
+    .contato__botoes {
+        align-items: center;       
+    }
+
+    .contato__texto {
+        font-size: 1.5rem; 
+        text-align: center;
+    }
+
+    .contato__botoes__botao {
+        width: 100%; 
+    }
+}

@@ -69,3 +69,12 @@
     filter: invert(1); /* Inverte as cores */
     transition: filter 0.3s ease-in-out; /* Transição suave */
 }
+
+@media (max-width: 667px) {
+    .apresentacao {
+        
+    }
+    .titulo {     
+        font-size: 3.5rem;
+    }    
+}
