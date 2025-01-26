@@ -1,4 +1,4 @@
-.sobre-mim {
+.container-1, .container-2 {
     font-family: var(--fonte-primaria);
     display: flex;
     flex-direction: row;
@@ -8,13 +8,6 @@
     padding: 5em 2em; 
     margin: 6em auto; 
     max-width: 1200px; 
-}
-
-.sobre-mim img {
-    width: 50%; 
-    border-radius: 3%;
-    box-shadow: 8px 8px 8px rgba(6, 169, 126, 0.25);
-    object-fit: cover; 
 }
 
 .sobre-mim__texto {
@@ -27,5 +20,46 @@
     line-height: 1.6; 
     text-align: justify; 
 }
+
+.container__lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.container__lista__titulo {
+    font-size: 2rem;
+    margin: 2rem 0;
+    font-family: var(--fonte-primaria);
+    font-weight: 700;
+    text-shadow: 4px 4px 4px rgba(6, 169, 126, 0.25);
+}
+
+.container__lista__item__conteudo {
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.container__lista__item__conteudo strong{
+    color: var(--cor-secundaria);
+    text-shadow: 2px 2px 2px rgba(6, 169, 126, 0.25);
+    font-weight: 700;
+}
+
+.container-1__img {
+    width: 50%; 
+    border-radius: 3%;
+    box-shadow: 8px 8px 8px rgba(6, 169, 126, 0.25);
+    object-fit: cover; 
+}
+
+.container-2__img {
+    width: 50%; 
+    border-radius: 3%;
+    object-fit: cover;
+}
+
+
+
 
 
