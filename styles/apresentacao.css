@@ -70,11 +70,16 @@
     transition: filter 0.3s ease-in-out; /* Transição suave */
 }
 
-@media (max-width: 667px) {
+@media (max-width: 1200px) {
     .apresentacao {
-        
+        padding-left: 1.8em;        
     }
+
     .titulo {     
-        font-size: 3.5rem;
-    }    
+        font-size: 3rem;
+    }
+    
+    .subtitulo {
+        font-size: 1.5em;
+    }
 }

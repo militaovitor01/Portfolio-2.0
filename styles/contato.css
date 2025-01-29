@@ -71,14 +71,11 @@
 @media (max-width: 1200px) {
     .contato {
         flex-direction: column;
+        text-align: center;
         align-items: center;
         justify-content: center;
-        padding: 2em 1em;
-        gap: 2em;
-    }
-
-    .contato__botoes {
-        align-items: center;       
+        gap: 2em; 
+        margin: 2em;       
     }
 
     .contato__texto {
@@ -86,7 +83,11 @@
         text-align: center;
     }
 
+    .contato__botoes {
+        align-items: center;       
+    }
+
     .contato__botoes__botao {
-        width: 100%; 
+        width: 60%; 
     }
 }

@@ -11,21 +11,25 @@
     <header class="cabecalho">
         <img src="img/logoV.png" class="img-cabecalho" alt="logo Dev">
         
-        <ul class="lista__cabecalho">
-            <li class="alterar__tema">
-                <img src="img/sol.png" alt=""></li>
-            </li>
-            <li class="lista__cabecalho__intens">
-                <a href="#sobre-mim" class="lista__cabecalho__intens-item">Sobre</a>
-            </li>
-            <li class="lista__cabecalho__intens">
-                <a href="#projetos" class="lista__cabecalho__intens-item"> Projetos</a>
-            </li>
-            <li class="lista__cabecalho__intens">
-                <a href="#contato" class="lista__cabecalho__intens-item">Contato</a>
-            </li>
-        </ul>
-        <img src="img/Menu.svg" class="menu-hamburguer" alt="Menu" onclick="toggleMenu()">
+        <nav class="menu">
+            <ul class="lista__cabecalho">
+                <li class="alterar__tema">
+                    <img src="img/sol.png" alt="Mudar tema">
+                </li>
+                <li class="lista__cabecalho__intens">
+                    <a href="#sobre-mim" class="lista__cabecalho__intens-item">Sobre</a>
+                </li>
+                <li class="lista__cabecalho__intens">
+                    <a href="#projetos" class="lista__cabecalho__intens-item">Projetos</a>
+                </li>
+                <li class="lista__cabecalho__intens">
+                    <a href="#contato" class="lista__cabecalho__intens-item">Contato</a>
+                </li>
+            </ul>
+        </nav>
+        <button class="botao__menu-hamburguer">
+            <img src="img/Menu.svg" class="menu-hamburguer" alt="Menu">
+        </button>       
     </header>
 
     <main>
@@ -97,6 +101,10 @@
             <div class="projetos__container">
                 <ul class="projetos__lista">
                     <li class="projetos__lista__item">
+                        <img class="projetos__lista__item-img" src="img/projetos/projetofokus.png" alt="">
+                        <h3 class="projetos__lista__item__titulo">Fokus</h3>
+                    </li> 
+                    <li class="projetos__lista__item">
                         <img class="projetos__lista__item-img" src="img/projetos/ShoesDay.png" alt="">
                         <h3 class="projetos__lista__item__titulo">ShoesDay</h3>
                     </li>
@@ -133,6 +141,6 @@
         <p class="rodape__texto">&copy; Desenvolvido por Vitor Militão <br> Algumas imagens foram geradas por IA</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

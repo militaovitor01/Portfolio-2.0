@@ -56,9 +56,20 @@
 }
 
 @media (max-width: 1200px) {
-    .projetos__titulo {
-        font-size: 1.5rem;
+    .projetos {
         text-align: center;
+        align-items: center;
     }
 
+    .projetos__titulo {
+        font-size: 0 1.7em;
+        padding:1em;
+    }
+
+    .projetos__lista {
+        padding: 0em;
+        margin: 0em;
+        gap: 1.5em;
+    }
+    
 }

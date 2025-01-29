@@ -1,5 +1,6 @@
 const botaoAlterarTema = document.querySelector('.alterar__tema')
 const somTrocarTema = new Audio('sons/pause.mp3')
+const menuHamburguer = document.querySelector('.botao__menu-hamburguer')
 
 botaoAlterarTema.addEventListener('click', function(){
     const html = document.querySelector('html')
@@ -15,7 +16,10 @@ botaoAlterarTema.addEventListener('click', function(){
     somTrocarTema.play()    
 })
 
-
+menuHamburguer.addEventListener('click', function(){
+    const menu = document.querySelector('.lista__cabecalho')
+    menu.classList.toggle('active')
+})
 
 // Cria o observer para verificar quando os elementos entram na tela
 const observer = new IntersectionObserver((entries, observer) => {

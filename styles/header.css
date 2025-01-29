@@ -5,10 +5,15 @@
     position: fixed; 
     top: 0;
     left: 0;
-    width: 100%;  /* O cabeçalho ocupa toda a largura da tela */
+    width: 100%;  
     background-color: var(--background-color); 
     z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
     box-shadow: 0 0 5px rgba(6, 169, 126, 0.25); 
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
 }
 
 .img-cabecalho {
@@ -16,7 +21,7 @@
     height: 100px;
 }
 
-.menu-hamburguer{
+.botao__menu-hamburguer{
     display: none;
 }
 
@@ -65,18 +70,68 @@ body {
     filter: invert(1) brightness(0);
 } 
 
-@media (max-width: 1200px) {
+@media (max-width: 700px) {
     .cabecalho {
-        justify-content: center;
+        justify-content: space-between;
+    }
+
+    .img-cabecalho {
+        width: 90px;
+        height: 90px;
+    }
+
+    .botao__menu-hamburguer{
+        display: block;
+        border: none;
+        background: none;
+        cursor: pointer;
     }
 
     .menu-hamburguer{
         display: block;
         filter: invert(1) brightness(2) contrast(100%);
-        transition: filter 0.3s ease-in-out; 
+        transition: filter 0.3s ease-in-out;
+        width: 20px;
+        margin-right: 2em;
+    }
+
+    .lista__cabecalho {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: var(--background-color);
+        box-shadow: 0px 4px 6px rgba(6, 169, 126, 0.25);
+        text-align: center;
+        padding: 0;
+        overflow: hidden;
+        
+        /* Animação */
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    .lista__cabecalho.active {
+        max-height: 300px; /* Ajuste para o tamanho necessário */
+        opacity: 1;
+        padding: 10px 0; /* Adiciona espaço ao abrir */
+    }
+
+    .alterar__tema img {
+        padding: 0;
+    }
+
+    .lista__cabecalho__intens {
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
     }
 
     .lista__cabecalho__intens-item {
-        display: none;
+        display: block;
+        padding: 10px;      
+        text-decoration: none; 
     }
 }
