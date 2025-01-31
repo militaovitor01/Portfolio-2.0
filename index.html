@@ -6,6 +6,7 @@
     <title>Portfolio - Vitor Militão</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styles/reset.css">
+    <link rel="icon" href="img/logoV.png" type="image/x-icon">
 </head>
 <body>
     <header class="cabecalho">
@@ -98,6 +99,18 @@
 
         <section class="projetos" id="projetos">
             <h2 class="projetos__titulo">Conheça um pouco dos meus projetos!</h2>
+
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2 id="modal-titulo"></h2>
+                    <img id="modal-imagem" src="" alt="">
+                    <p id="modal-descricao"></p>
+                    <a id="modal-linkCodigo" href="#" target="_blank">Código Fonte</a>
+                    <a id="modal-linkDeploy" href="#" target="_blank">Deploy</a>
+                </div>
+            </div>
+
             <div class="projetos__container">
                 <ul class="projetos__lista">
                     <li class="projetos__lista__item">

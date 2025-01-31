@@ -1,0 +1,102 @@
+.modal {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0; 
+    transform: scale(0.8); 
+    pointer-events: none; 
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.modal.show {
+    opacity: 1; /* Fica visível */
+    transform: scale(1); /* Cresce suavemente */
+    pointer-events: all; /* Permite interações */
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    background: var(--cor-primaria);
+    color: var(--background-color);
+    font-family: var(--fonte-primaria);   
+    padding: 20px;
+    border-radius: 10px;
+    width: auto;
+    text-align: center;
+    align-items: center;
+    position: relative; 
+}
+
+.modal-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.modal-content img {
+    width: 50em;
+    border-radius: 4px;
+}
+
+.modal-content a{
+    text-decoration: none;
+    border: 1px solid var(--background-color);
+    border-radius: 8px;
+    padding: 2em;
+    color: var(--cor-primaria);
+    background-color: var(--cor-secundaria);
+    font-weight: 700;
+    width: 25%;
+}
+
+.modal-content a:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 4px rgba(6, 169, 126, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+[data-contexto="white"] .modal{
+    --background-color: #0f0e16;
+    --cor-primaria: #ffff;
+    --cor-secundaria: #04a97f;
+}
+
+@media (max-width: 700px) {
+    .modal-content {
+        padding: 10px;
+        margin: 1.5em;
+    }
+
+    .modal-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .modal-content img {
+        width: 100%;
+    }
+
+    .modal-content a{
+        padding: 1em;
+        width: 250px;
+    }   
+}
