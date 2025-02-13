@@ -41,6 +41,10 @@ const projetos = [
         titulo: "Fokus", imagem:"img/projetos/projetofokus.png", descricao: "App de foco e produtividade.", linkCodigo: "https://github.com/militaovitor01/Fokus", linkDeploy: "https://fokus-eta-seven.vercel.app/" 
     },
 
+    {
+        titulo: "VidFlow", imagem:"img/projetos/vidflow.PNG", descricao: "App de simulação do youtube. Desenvolvido utilizando vite e nodejs.", linkCodigo:"https://github.com/militaovitor01/nodejs-vidflow-vite", linkDeploy: "https://nodejs-vidflow-vite-rosy-xi.vercel.app/"
+    },
+
     { 
         titulo: "ShoesDay", imagem:"img/projetos/ShoesDay.png", descricao: "E-commerce para venda de calçados.", linkCodigo: "https://github.com/militaovitor01/ShoesDay", linkDeploy: "https://shoes-day.vercel.app/" 
     },
@@ -62,6 +66,22 @@ const projetos = [
     }
 ];
 
+const listaProjetos = document.querySelector(".projetos__lista");
+
+listaProjetos.innerHTML = "";
+
+projetos.forEach(projeto => {
+    const li = document.createElement("li");
+    li.classList.add("projetos__lista__item");
+
+    li.innerHTML = `
+        <img class="projetos__lista__item-img" src="${projeto.imagem}" alt="${projeto.titulo}">
+        <h3 class="projetos__lista__item__titulo">${projeto.titulo}</h3>
+    `;
+
+    listaProjetos.appendChild(li);
+});
+
 const modal = document.getElementById("modal");
 const modalTitulo = document.getElementById("modal-titulo");
 const modalImagem = document.getElementById("modal-imagem");
@@ -71,17 +91,18 @@ const modalLinkDeploy = document.getElementById("modal-linkDeploy");
 const closeModal = document.querySelector(".close");
 
 // Função para abrir o modal com dados do projeto
-document.querySelectorAll(".projetos__lista__item").forEach((item, index) => {
-    item.addEventListener("click", () => {
-        modalTitulo.textContent = projetos[index].titulo;
-        modalDescricao.textContent = projetos[index].descricao;
-        modalImagem.src = projetos[index].imagem;
-        modalLinkCodigo.href = projetos[index].linkCodigo;
-        modalLinkDeploy.href = projetos[index].linkDeploy;
-        modal.style.display = "flex";
+document.querySelectorAll(".projetos__lista__item")
+    .forEach((item, index) => {
+        item.addEventListener("click", () => {
+            modalTitulo.textContent = projetos[index].titulo;
+            modalDescricao.textContent = projetos[index].descricao;
+            modalImagem.src = projetos[index].imagem;
+            modalLinkCodigo.href = projetos[index].linkCodigo;
+            modalLinkDeploy.href = projetos[index].linkDeploy;
+            modal.style.display = "flex";
 
-        modal.classList.add("show");
-    });
+            modal.classList.add("show");
+        });
 });
 
 // Fechar modal ao clicar no botão "X"
