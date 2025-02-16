@@ -1,0 +1,100 @@
+.tecnologias{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10em;
+}
+
+.tecnologias__titulo {
+    font-size: 2rem;
+    margin: 2rem 0;
+    font-family: var(--fonte-primaria);
+    font-weight: 700;
+    text-shadow: 4px 4px 4px rgba(6, 169, 126, 0.25);
+}
+
+.tecnologias-container {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    justify-content: center;
+}
+
+.tecnologias-container__hexagon {
+    width: 170px; /* Tamanho do hexágono */
+    height: 170px;
+    background-color: var(--cor-secundaria);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.tecnologias-container__hexagon:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 20px rgba(6, 169, 126, 0.5), 
+                -10px -10px 20px rgba(6, 169, 126, 0.3);
+}
+
+.tecnologias-container__item {
+    display: inline-block;
+    position: relative;
+    width: 150px; /* Define um tamanho fixo para o círculo */
+    height: 150px;
+    position: relative;
+}
+
+.tecnologias-container__item-img{
+    width: 60px;
+    height: auto;
+    position: absolute;
+}
+
+/* Alternando a posição vertical em zigue-zague */
+.tecnologias-container__item:nth-child(odd) {
+    transform: translateY(-70px);
+}
+
+.tecnologias-container__item:nth-child(even) {
+    transform: translateY(50px);
+}
+
+.tecnologias-container img {
+    height: 50px;
+}
+
+@media (max-width: 900px) {
+    .tecnologias {
+        gap: 5em;
+    }
+
+    .tecnologias-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 6em;
+    }
+
+    .tecnologias-container__item {
+        width: 100%; 
+        display: flex;
+        justify-content: center;
+        padding: 3em;     
+    }
+
+    .tecnologias-container__hexagon {
+        width: 220px;
+        height: 220px;
+    }
+
+    .tecnologias-container__item:nth-child(odd) {
+        transform: none  
+    }
+
+    .tecnologias-container__item:nth-child(even) {
+        transform: none;
+    }
+}

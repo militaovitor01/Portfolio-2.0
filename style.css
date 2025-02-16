@@ -6,6 +6,7 @@
 @import url(styles/projetos.css);
 @import url(styles/rodape.css);
 @import url(styles/modal.css);
+@import url(styles/tecnologias.css);
 
 :root {
     --background-color: #0f0e16;
